@@ -100,73 +100,188 @@
 
 
     <!-- Header -->
-    <header id="header" class="ex-header">
+    <header id="app" class="ex-header">
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col col-md-12">
                     <div class="card-header">
                         <h4>Pertanyaan</h4>
                         <div class="card-body">
-                            <table class="table" id="app">
-                                <tr>
+                            <div class="bg-light" v-show="notif">
+                                <p>Hasil dari uji pakar anda adalah</p>
+                                <p>anda kemungkinan terkena Covid-19</p>
+                                <p>sebesar</p>
+                                <strong>{{total}} %</strong>
+                            </div>
+                            <table class="table bg-light rounded">
+                                <tr class="text-center" v-show="answer">
+                                    <th></th>
+                                    <th>Jawaban anda Telah Tersimpan</th>
+                                    <th></th>
+                                </tr>
+                                <tr v-show="ask">
                                     <th class="scope">1</th>
                                     <th class="scope">List Pertanyaan</th>
                                     <th class="scope">
-                                        <select class="form-control" v-model="jawaban">
-                                            <option v-for="option in options" v-bind:value="option.value">
-                                                {{ option.text }}
-                                              </option>
-                                        </select>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak()">Tidak</button>
                                     </th>
                                 </tr>
-                                <tr>
+                                <tr v-show="ask2">
                                     <th class="scope">1</th>
                                     <th class="scope">List Pertanyaan</th>
                                     <th class="scope">
-                                        <select class="form-control">
-                                        <option value="">...</option>
-                                        <option value="yes-1">Ya</option>
-                                        <option value="no-1">Tidak</option>
-                                        </select>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya2()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak2()">Tidak</button>
                                     </th>
                                 </tr>
-                                <tr>
+                                <tr v-show="ask3">
                                     <th class="scope">1</th>
                                     <th class="scope">List Pertanyaan</th>
                                     <th class="scope">
-                                        <select class="form-control">
-                                        <option value="">...</option>
-                                        <option value="yes-1">Ya</option>
-                                        <option value="no-1">Tidak</option>
-                                        </select>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya3()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak3()">Tidak</button>
                                     </th>
                                 </tr>
-                                <tr>
+                                <tr v-show="ask4">
                                     <th class="scope">1</th>
                                     <th class="scope">List Pertanyaan</th>
                                     <th class="scope">
-                                        <select class="form-control">
-                                        <option value="">...</option>
-                                        <option value="yes-1">Ya</option>
-                                        <option value="no-1">Tidak</option>
-                                        </select>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya4()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak4()">Tidak</button>
                                     </th>
                                 </tr>
-                                <tr>
+                                <tr v-show="ask5">
                                     <th class="scope">1</th>
                                     <th class="scope">List Pertanyaan</th>
                                     <th class="scope">
-                                        <select class="form-control">
-                                        <option value="">...</option>
-                                        <option value="yes-1">Ya</option>
-                                        <option value="no-1">Tidak</option>
-                                        </select>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya5()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak5()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask6">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya6()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak6()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask7">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya7()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak7()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask8">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya8()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak8()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask9">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya9()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak9()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask10">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya10()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak10()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask11">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya11()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak11()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask12">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya12()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak12()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask13">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya13()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak13()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask14">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya14()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak14()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask15">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya15()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak15()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask16">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya16()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak16()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask17">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya17()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak17()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask18">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya18()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak18()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask19">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya19()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak19()">Tidak</button>
+                                    </th>
+                                </tr>
+                                <tr v-show="ask20">
+                                    <th class="scope">1</th>
+                                    <th class="scope">List Pertanyaan</th>
+                                    <th class="scope">
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="iya20()" >Iya</button>
+                                        <button class="btn-solid-lg btn btn-outline-primary page-scroll" @click="tidak20()">Tidak</button>
                                     </th>
                                 </tr>
                             </table>
                         </div>
-                        <a class="btn-solid-lg page-scroll" href="#">Submit</a>
-                        <a class="btn-solid-lg page-scroll" href="#">Back</a>
+                        <button class="btn-solid-lg page-scroll" v-show="btn" @click="hasilakhir()" >Submit</button>
                     </div>
                     <!-- end of col -->
                 </div>
@@ -200,17 +315,142 @@
     <script>
         var app = new Vue({
             el: '#app',
-            data() {
-                return {
-                    nilaiakhir: 0,
-
+            data: {
+                total: 0,
+                notif:false,
+                btn: false,
+                answer : false,
+                ask: true,
+                ask2: true,
+                ask3: true,
+                ask4: true,
+                ask5: true,
+                ask6: true,
+                ask7: true,
+                ask8: true,
+                ask9: true,
+                ask10: true,
+                ask11: true,
+                ask12: true,
+                ask13: true,
+                ask14: true,
+                ask15: true,
+                ask16: true,
+                ask17: true,
+                ask18: true,
+                ask19: true,
+                ask20: true,
+            },methods: {
+                iya: function() {
+                    this.total +=5;
+                    this.ask=false;
+                    this.answer=true;
+                },tidak: function () {
+                    this.ask=false;
+                    this.answer=true;
+                },iya2: function() {
+                    this.total +=20;
+                    this.ask2=false;
+                },tidak2: function () {
+                    this.ask2=false;
+                },iya3: function() {
+                    this.total +=30;
+                    this.ask3=false;
+                },tidak3: function () {
+                    this.ask3=false;
+                },iya4: function() {
+                    this.total +=40;
+                    this.ask4=false;
+                },tidak4: function () {
+                    this.ask4=false;
+                },iya5: function() {
+                    this.total +=50;
+                    this.ask5=false;
+                },tidak5: function () {
+                    this.ask5=false;
+                },iya6: function() {
+                    this.total +=60;
+                    this.ask6=false;
+                },tidak6: function () {
+                    this.ask6=false;
+                },iya7: function() {
+                    this.total +=70;
+                    this.ask7=false;
+                },tidak7: function () {
+                    this.ask7=false;
+                },iya8: function() {
+                    this.total +=80;
+                    this.ask8=false;
+                },tidak8: function () {
+                    this.ask8=false;
+                },iya9: function() {
+                    this.total +=90;
+                    this.ask9=false;
+                },tidak9: function () {
+                    this.ask9=false;
+                },iya10: function() {
+                    this.total +=100;
+                    this.ask10=false;
+                },tidak10: function () {
+                    this.ask10=false;
+                },iya11: function() {
+                    this.total +=110;
+                    this.ask11=false;
+                },tidak11: function () {
+                    this.ask11=false;
+                },iya12: function() {
+                    this.total +=120;
+                    this.ask12=false;
+                },tidak12: function () {
+                    this.ask12=false;
+                },iya13: function() {
+                    this.total +=130;
+                    this.ask13=false;
+                },tidak13: function () {
+                    this.ask13=false;
+                },iya14: function() {
+                    this.total +=140;
+                    this.ask14=false;
+                },tidak14: function () {
+                    this.ask14=false;
+                },iya15: function() {
+                    this.total +=150;
+                    this.ask15=false;
+                },tidak15: function () {
+                    this.ask15=false;
+                },iya16: function() {
+                    this.total +=160;
+                    this.ask16=false;
+                },tidak16: function () {
+                    this.ask16=false;
+                },iya17: function() {
+                    this.total +=170;
+                    this.ask17=false;
+                },tidak17: function () {
+                    this.ask17=false;
+                },iya18: function() {
+                    this.total +=180;
+                    this.ask18=false;
+                },tidak18: function () {
+                    this.ask18=false;
+                },iya19: function() {
+                    this.total +=190;
+                    this.ask19=false;
+                },tidak19: function () {
+                    this.ask19=false;
+                },iya20: function() {
+                    this.total +=200;
+                    this.ask20=false;
+                    this.btn=true;
+                },tidak20: function () {
+                    this.ask20=false;
+                    this.btn=true;
+                },hasilakhir: function() {
+                    this.notif=true;
+                    this.answer=false;
                 }
             },
-            methods: {
-                jawaban: function() {
-                    this.nilaiakhir += 5;
-                }
-            },
+                
         })
     </script>
 
