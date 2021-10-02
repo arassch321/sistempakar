@@ -72,7 +72,8 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../welcome/index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="../welcome/index.html">Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="../welcome/forwardchaining.html">Forward Chaining</a>
@@ -113,15 +114,15 @@
                         <hr>
                         <div class="card-body">
                         </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda Demam ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
+                        <div class="ask-covid">
+                            <div class="row my-3" v-show="ask">
+                                <div class="col-md-12">
+                                    <p>Apakah Anda Demam ?</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-lg btn-primary" @click="positif()">Ya</button>
+                                </div>
+                                <div class="col-md-6">
                                     <div class="btn btn-lg btn-primary" @click="negatif()">Tidak</div>
                                 </div>
                             </div>
@@ -133,297 +134,333 @@
                                     <div class="col-md-6">
                                         <button class="btn btn-lg btn-primary" @click="positif2()">Ya</button>
                                     </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif2()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask3">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda kelelahan ?</p>
-                                    </div>
                                     <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif3()">Ya</button>
+                                        <div class="btn btn-lg btn-primary" @click="negatif2()">Tidak</div>
                                     </div>
+                                </div>
+                                <div class="ask-covid">
+                                    <div class="row my-3" v-show="ask3">
+                                        <div class="col-md-12">
+                                            <p>Apakah Anda kelelahan ?</p>
+                                        </div>
                                         <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif3()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask4">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda Mengigil ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif4()">Ya</button>
-                                    </div>
+                                            <button class="btn btn-lg btn-primary" @click="positif3()">Ya</button>
+                                        </div>
                                         <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif4()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask5">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda nyeri dada ?</p>
+                                            <div class="btn btn-lg btn-primary" @click="negatif3()">Tidak</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif5()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif5()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask6">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda nyeri Kepala?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif6()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif6()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask7">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda Dehidrasi?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif7()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif7()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask8">
-                                    <div class="col-md-12">
-                                        <p>Apakah nafsu makan Anda berkurang?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif8()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif8()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask9">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda keringat lebih ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif9()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif9()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask10">
-                                    <div class="col-md-12">
-                                        <p>Apakah suhu Anda diatas ≥ 37,5 C  ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif10()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif10()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask11">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda Pernah Berpergian ke luar kota ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif11()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif11()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask12">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda kehilangan rasa atau bau ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif12()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif12()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask13">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda kesulitan bernapas atau sesak napas ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif13()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif13()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask14">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda kesulitan berbicara atau bergerak, atau bingung ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif14()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif14()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask15">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda sakit kepala ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif15()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif15()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask16">
-                                    <div class="col-md-12">
-                                        <p>Adakah keluarga serumah yang kontak erat/suspek/konfirmasi/sedang dirawat karena Covid-19?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif16()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif16()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask17">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda mata merah atau iritasi ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif17()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif17()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask18">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda sakit tenggorokan ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif18()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif18()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask19">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif19()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif19()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="ask20">
-                                    <div class="col-md-12">
-                                        <p>Apakah Anda terdapat gangguan penglihatan (sensitif terhadap cahaya, konjungtivitis)?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif20()">Ya</button>
-                                    </div>
-                                        <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif20()">Tidak</div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil">
-                                    <div class="col-md-12">
-                                        <p>Kemungkinan Anda Terkena Penyakit Tipes</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil2">
-                                    <div class="col-md-12">
-                                        <p>Kemungkinan Anda Terkena Penyakit Influenza</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset2()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil3">
-                                    <div class="col-md-12">
-                                        <p>Kemungkinan Anda Terkena Penyakit Demam Berdarah</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset3()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil4">
-                                    <div class="col-md-12">
-                                        <p>Kemungkinan Anda Terkena Penyakit Covid-19</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset4()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil5">
-                                    <div class="col-md-12">
-                                        <p>InsyAllah Anda Sehat dari Covid</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset5()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ask-covid">
-                                <div class="row my-3" v-show="hasil6">
-                                    <div class="col-md-12">
-                                        <p>Kemungkinan Anda Terkena Penyakit Hipertermia</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="reset6()">Pemeriksaan ulang ?</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container border text-center">
-                        Persentase Covid-19
-                    </div>
-                </div>
-                <!-- end of col -->
-            </div>
-            <!-- end of row -->
-        </div>
-        <!-- end of container -->
+                                    <div class="ask-covid">
+                                        <div class="row my-3" v-show="ask4">
+                                            <div class="col-md-12">
+                                                <p>Apakah Anda Mengigil ?</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-lg btn-primary" @click="positif4()">Ya</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="btn btn-lg btn-primary" @click="negatif4()">Tidak</div>
+                                            </div>
+                                        </div>
+                                        <div class="ask-covid">
+                                            <div class="row my-3" v-show="ask5">
+                                                <div class="col-md-12">
+                                                    <p>Apakah Anda nyeri dada ?</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button class="btn btn-lg btn-primary" @click="positif5()">Ya</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="btn btn-lg btn-primary" @click="negatif5()">Tidak</div>
+                                                </div>
+                                            </div>
+                                            <div class="ask-covid">
+                                                <div class="row my-3" v-show="ask6">
+                                                    <div class="col-md-12">
+                                                        <p>Apakah Anda nyeri Kepala?</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button class="btn btn-lg btn-primary" @click="positif6()">Ya</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="btn btn-lg btn-primary" @click="negatif6()">Tidak
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ask-covid">
+                                                    <div class="row my-3" v-show="ask7">
+                                                        <div class="col-md-12">
+                                                            <p>Apakah Anda Dehidrasi?</p>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <button class="btn btn-lg btn-primary" @click="positif7()">Ya</button>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="btn btn-lg btn-primary" @click="negatif7()">
+                                                                Tidak</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ask-covid">
+                                                        <div class="row my-3" v-show="ask8">
+                                                            <div class="col-md-12">
+                                                                <p>Apakah nafsu makan Anda berkurang?</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <button class="btn btn-lg btn-primary" @click="positif8()">Ya</button>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="btn btn-lg btn-primary" @click="negatif8()">
+                                                                    Tidak</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ask-covid">
+                                                            <div class="row my-3" v-show="ask9">
+                                                                <div class="col-md-12">
+                                                                    <p>Apakah Anda keringat lebih ?</p>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <button class="btn btn-lg btn-primary" @click="positif9()">Ya</button>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="btn btn-lg btn-primary" @click="negatif9()">Tidak</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ask-covid">
+                                                                <div class="row my-3" v-show="ask10">
+                                                                    <div class="col-md-12">
+                                                                        <p>Apakah suhu Anda diatas ≥ 37,5 C ?</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <button class="btn btn-lg btn-primary" @click="positif10()">Ya</button>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="btn btn-lg btn-primary" @click="negatif10()">Tidak</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ask-covid">
+                                                                    <div class="row my-3" v-show="ask11">
+                                                                        <div class="col-md-12">
+                                                                            <p>Apakah Anda Pernah Berpergian ke luar kota ?</p>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <button class="btn btn-lg btn-primary" @click="positif11()">Ya</button>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="btn btn-lg btn-primary" @click="negatif11()">Tidak</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ask-covid">
+                                                                        <div class="row my-3" v-show="ask12">
+                                                                            <div class="col-md-12">
+                                                                                <p>Apakah Anda kehilangan rasa atau bau ?
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <button class="btn btn-lg btn-primary" @click="positif12()">Ya</button>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="btn btn-lg btn-primary" @click="negatif12()">Tidak</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ask-covid">
+                                                                            <div class="row my-3" v-show="ask13">
+                                                                                <div class="col-md-12">
+                                                                                    <p>Apakah Anda kesulitan bernapas atau sesak napas ?</p>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <button class="btn btn-lg btn-primary" @click="positif13()">Ya</button>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="btn btn-lg btn-primary" @click="negatif13()">Tidak</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="ask-covid">
+                                                                                <div class="row my-3" v-show="ask14">
+                                                                                    <div class="col-md-12">
+                                                                                        <p>Apakah Anda kesulitan berbicara atau bergerak, atau bingung ?</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <button class="btn btn-lg btn-primary" @click="positif14()">Ya</button>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="btn btn-lg btn-primary" @click="negatif14()">Tidak
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ask-covid">
+                                                                                    <div class="row my-3" v-show="ask15">
+                                                                                        <div class="col-md-12">
+                                                                                            <p>Apakah Anda sakit kepala ?
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <button class="btn btn-lg btn-primary" @click="positif15()">Ya</button>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="btn btn-lg btn-primary" @click="negatif15()">
+                                                                                                Tidak</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="ask-covid">
+                                                                                        <div class="row my-3" v-show="ask16">
+                                                                                            <div class="col-md-12">
+                                                                                                <p>Adakah keluarga serumah yang kontak erat/suspek/konfirmasi/sedang dirawat karena Covid-19?
+                                                                                                </p>
+                                                                                            </div>
+                                                                                            <div class="col-md-6">
+                                                                                                <button class="btn btn-lg btn-primary" @click="positif16()">Ya</button>
+                                                                                            </div>
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="btn btn-lg btn-primary" @click="negatif16()">
+                                                                                                    Tidak</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="ask-covid">
+                                                                                            <div class="row my-3" v-show="ask17">
+                                                                                                <div class="col-md-12">
+                                                                                                    <p>Apakah Anda mata merah atau iritasi ?</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <button class="btn btn-lg btn-primary" @click="positif17()">Ya</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <div class="btn btn-lg btn-primary" @click="negatif17()">
+                                                                                                        Tidak</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="ask-covid">
+                                                                                                <div class="row my-3" v-show="ask18">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <p>Apakah Anda sakit tenggorokan ?
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <button class="btn btn-lg btn-primary" @click="positif18()">Ya</button>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="btn btn-lg btn-primary" @click="negatif18()">
+                                                                                                            Tidak</div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="ask-covid">
+                                                                                                    <div class="row my-3" v-show="ask19">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <p>Apakah Anda ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki ?
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <button class="btn btn-lg btn-primary" @click="positif19()">Ya</button>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <div class="btn btn-lg btn-primary" @click="negatif19()">
+                                                                                                                Tidak
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="ask-covid">
+                                                                                                        <div class="row my-3" v-show="ask20">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <p>Apakah Anda terdapat gangguan penglihatan (sensitif terhadap cahaya, konjungtivitis)?
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6">
+                                                                                                                <button class="btn btn-lg btn-primary" @click="positif20()">Ya</button>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6">
+                                                                                                                <div class="btn btn-lg btn-primary" @click="negatif20()">
+                                                                                                                    Tidak
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Tipes
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil2">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Influenza
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset2()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil3">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Demam Berdarah
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset3()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil4">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Covid-19
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset4()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil5">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>InsyAllah Anda Sehat dari Covid
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset5()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="ask-covid">
+                                                                                                            <div class="row my-3" v-show="hasil6">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Hipertermia
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <button class="btn btn-primary" @click="reset6()">Pemeriksaan
+                                                                                                                        ulang
+                                                                                                                        ?</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="container border text-center">
+                                                                                                    Persentase Covid-19
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- end of col -->
+                                                                                        </div>
+                                                                                        <!-- end of row -->
+                                                                                    </div>
+                                                                                    <!-- end of container -->
     </header>
     <!-- end of ex-header -->
     <!-- end of header -->
@@ -446,210 +483,260 @@
 
     <!-- vue.js -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
-    
+
     <script src="https://unpkg.com/vue"></script>
     <!-- <script src="index.js"></script> -->
     <!-- <div id="app">
 		<p>{{message}}</p>
 	</div> -->
-	<script>
-		var app = new Vue({
-			el:'#app',
-			data:{
-				counter : 0,
-                ask : true,
-                ask2 : false,
-                ask3 : false,
-                ask4 : false,
-                ask5 : false,
-                ask6 : false,
-                ask7 : false,
-                ask8 : false,
-                ask9 : false,
-                ask10 : false,
-                ask11 : false,
-                ask12 : false,
-                ask13 : false,
-                ask14 : false,
-                ask15 : false,
-                ask16 : false,
-                ask17 : false,
-                ask18 : false,
-                ask19 : false,
-                ask20 : false,
-                hasil : false,
-                hasil2 : false,
-                hasil3 : false,
-                hasil4 : false,
-                hasil5 : false,
-                hasil6 : false,
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                ask: true,
+                ask2: false,
+                ask3: false,
+                ask4: false,
+                ask5: false,
+                ask6: false,
+                ask7: false,
+                ask8: false,
+                ask9: false,
+                ask10: false,
+                ask11: false,
+                ask12: false,
+                ask13: false,
+                ask14: false,
+                ask15: false,
+                ask16: false,
+                ask17: false,
+                ask18: false,
+                ask19: false,
+                ask20: false,
+                hasil: false,
+                hasil2: false,
+                hasil3: false,
+                hasil4: false,
+                hasil5: false,
+                hasil6: false,
 
-			},methods:{
-            positif: function () {
-                this.counter +=5 ;
-                this.ask = false;
-                this.ask2 = true ;
-            },negatif: function () {
-                this.ask = false;
-                this.hasil5 = true ;
+            },
+            methods: {
+                positif: function() {
+                    this.counter += 5;
+                    this.ask = false;
+                    this.ask2 = true;
+                },
+                negatif: function() {
+                    this.ask = false;
+                    this.hasil5 = true;
 
-            },positif2: function () {
-                this.counter +=5 ;
-                this.ask2 = false;
-                this.ask3 = true;
-            },negatif2: function () {
-                this.ask2 = false;
-                this.ask7 = true;
-            },positif3: function () {
-                this.counter +=5 ;
-                this.ask3 = false;
-                this.ask4 = true;
-            },negatif3: function () {
-                this.ask3 = false;
-                this.ask10 = true;
-            },positif4: function () {
-                this.counter +=5 ;
-                this.ask4 = false;
-                this.ask8 = true;
-            },negatif4: function () {
-                this.ask4 = false;
-                this.ask7 = true;
-            },positif5: function () {
-                this.counter +=5 ;
-                this.ask5 = false;
-                this.ask6 = true;
-            },negatif5: function () {
-                this.ask5 = false;
-                this.ask9 = true;
-            },positif6: function () {
-                this.counter +=5 ;
-                this.ask6 = false;
-                this.ask15 = true;
-            },negatif6: function () {
-                this.ask6 = false;
-                this.hasil2 = true;
-            },positif7: function () {
-                this.counter +=5 ;
-                this.ask7 = false;
-                this.hasil6 = true;
-            },negatif7: function () {
-                this.ask7 = false;
-                this.ask12 = true;
-            },positif8: function () {
-                this.counter +=5 ;
-                this.ask8 = false;
-                this.ask5 = true;
-            },negatif8: function () {
-                this.ask8 = false;
-                this.ask9 = true;
-            },positif9: function () {
-                this.counter +=5 ;
-                this.ask9 = false;
-                this.hasil = true;
-            },negatif9: function () {
-                this.ask9 = false;
-                this.ask14 = true;
-            },positif10: function () {
-                this.counter +=5 ;
-                this.ask10 = false;
-                this.ask15 = true;
-            },negatif10: function () {
-                this.ask10 = false;
-                this.ask11 = true;
-            },positif11: function () {
-                this.counter +=5 ;
-                this.ask11 = false;
-                this.ask16 = true;
-            },negatif11: function () {
-                this.ask11 = false;
-                this.ask12 = true;
-            },positif12: function () {
-                this.counter +=5 ;
-                this.ask12 = false;
-                this.ask13 = true;
-            },negatif12: function () {
-                this.ask12 = false;
-                this.ask8 = true;
-            },positif13: function () {
-                this.counter +=5 ;
-                this.ask13 = false;
-                this.ask14 = true;
-            },negatif13: function () {
-                this.ask13 = false;
-                this.ask18 = true;
-            },positif14: function () {
-                this.counter +=5 ;
-                this.ask14 = false;
-                this.hasil4 = true;
-            },negatif14: function () {
-                this.ask14 = false;
-                this.ask19 = true;
-            },positif15: function () {
-                this.counter +=5 ;
-                this.ask15 = false;
-                this.ask16 = true;
-            },negatif15: function () {
-                this.ask15 = false;
-                this.ask17 = true;
-            },positif16: function () {
-                this.counter +=5 ;
-                this.ask16 = false;
-                this.hasil4 = true;
-            },negatif16: function () {
-                this.ask16 = false;
-                this.ask17 = true;
-            },positif17: function () {
-                this.counter +=5 ;
-                this.ask17 = false;
-                this.ask18 = true;
-            },negatif17: function () {
-                this.ask17 = false;
-                this.hasil3 = true;
-            },positif18: function () {
-                this.counter +=5 ;
-                this.ask18 = false;
-                this.ask19 = true;
-            },negatif18: function () {
-                this.ask18 = false;
-                this.ask12 = true;
-            },positif19: function () {
-                this.counter +=5 ;
-                this.ask19 = false;
-                this.ask20 = true;
-            },negatif19: function () {
-                this.ask19 = false;
-                this.ask9 = true;
-            },positif20: function () {
-                this.counter +=5 ;
-                this.ask20 = false;
-                this.hasil4 = true;
-            },negatif20: function () {
-                this.ask20 = false;
-                this.hasil4 = true;
-            },reset: function () {
-                this.counter = 0 ;
-                this.hasil = false;
-                this.ask = true;
-            },reset2: function () {
-                this.counter = 0 ;
-                this.hasil2 = false;
-                this.ask = true;
-            },reset3: function () {
-                this.counter = 0 ;
-                this.hasil3 = false;
-                this.ask = true;
-            },reset4: function () {
-                this.counter = 0 ;
-                this.hasil4 = false;
-                this.ask = true;
-            },reset5: function () {
-                this.counter = 0 ;
-                this.hasil5 = false;
-                this.ask = true;
+                },
+                positif2: function() {
+                    this.counter += 5;
+                    this.ask2 = false;
+                    this.ask3 = true;
+                },
+                negatif2: function() {
+                    this.ask2 = false;
+                    this.ask7 = true;
+                },
+                positif3: function() {
+                    this.counter += 5;
+                    this.ask3 = false;
+                    this.ask4 = true;
+                },
+                negatif3: function() {
+                    this.ask3 = false;
+                    this.ask10 = true;
+                },
+                positif4: function() {
+                    this.counter += 5;
+                    this.ask4 = false;
+                    this.ask8 = true;
+                },
+                negatif4: function() {
+                    this.ask4 = false;
+                    this.ask7 = true;
+                },
+                positif5: function() {
+                    this.counter += 5;
+                    this.ask5 = false;
+                    this.ask6 = true;
+                },
+                negatif5: function() {
+                    this.ask5 = false;
+                    this.ask9 = true;
+                },
+                positif6: function() {
+                    this.counter += 5;
+                    this.ask6 = false;
+                    this.ask15 = true;
+                },
+                negatif6: function() {
+                    this.ask6 = false;
+                    this.hasil2 = true;
+                },
+                positif7: function() {
+                    this.counter += 5;
+                    this.ask7 = false;
+                    this.hasil6 = true;
+                },
+                negatif7: function() {
+                    this.ask7 = false;
+                    this.ask12 = true;
+                },
+                positif8: function() {
+                    this.counter += 5;
+                    this.ask8 = false;
+                    this.ask5 = true;
+                },
+                negatif8: function() {
+                    this.ask8 = false;
+                    this.ask9 = true;
+                },
+                positif9: function() {
+                    this.counter += 5;
+                    this.ask9 = false;
+                    this.hasil = true;
+                },
+                negatif9: function() {
+                    this.ask9 = false;
+                    this.ask14 = true;
+                },
+                positif10: function() {
+                    this.counter += 5;
+                    this.ask10 = false;
+                    this.ask15 = true;
+                },
+                negatif10: function() {
+                    this.ask10 = false;
+                    this.ask11 = true;
+                },
+                positif11: function() {
+                    this.counter += 5;
+                    this.ask11 = false;
+                    this.ask16 = true;
+                },
+                negatif11: function() {
+                    this.ask11 = false;
+                    this.ask12 = true;
+                },
+                positif12: function() {
+                    this.counter += 5;
+                    this.ask12 = false;
+                    this.ask13 = true;
+                },
+                negatif12: function() {
+                    this.ask12 = false;
+                    this.ask8 = true;
+                },
+                positif13: function() {
+                    this.counter += 5;
+                    this.ask13 = false;
+                    this.ask14 = true;
+                },
+                negatif13: function() {
+                    this.ask13 = false;
+                    this.ask18 = true;
+                },
+                positif14: function() {
+                    this.counter += 5;
+                    this.ask14 = false;
+                    this.hasil4 = true;
+                },
+                negatif14: function() {
+                    this.ask14 = false;
+                    this.ask19 = true;
+                },
+                positif15: function() {
+                    this.counter += 5;
+                    this.ask15 = false;
+                    this.ask16 = true;
+                },
+                negatif15: function() {
+                    this.ask15 = false;
+                    this.ask17 = true;
+                },
+                positif16: function() {
+                    this.counter += 5;
+                    this.ask16 = false;
+                    this.hasil4 = true;
+                },
+                negatif16: function() {
+                    this.ask16 = false;
+                    this.ask17 = true;
+                },
+                positif17: function() {
+                    this.counter += 5;
+                    this.ask17 = false;
+                    this.ask18 = true;
+                },
+                negatif17: function() {
+                    this.ask17 = false;
+                    this.hasil3 = true;
+                },
+                positif18: function() {
+                    this.counter += 5;
+                    this.ask18 = false;
+                    this.ask19 = true;
+                },
+                negatif18: function() {
+                    this.ask18 = false;
+                    this.ask12 = true;
+                },
+                positif19: function() {
+                    this.counter += 5;
+                    this.ask19 = false;
+                    this.ask20 = true;
+                },
+                negatif19: function() {
+                    this.ask19 = false;
+                    this.ask9 = true;
+                },
+                positif20: function() {
+                    this.counter += 5;
+                    this.ask20 = false;
+                    this.hasil4 = true;
+                },
+                negatif20: function() {
+                    this.ask20 = false;
+                    this.hasil4 = true;
+                },
+                reset: function() {
+                    this.counter = 0;
+                    this.hasil = false;
+                    this.ask = true;
+                },
+                reset2: function() {
+                    this.counter = 0;
+                    this.hasil2 = false;
+                    this.ask = true;
+                },
+                reset3: function() {
+                    this.counter = 0;
+                    this.hasil3 = false;
+                    this.ask = true;
+                },
+                reset4: function() {
+                    this.counter = 0;
+                    this.hasil4 = false;
+                    this.ask = true;
+                },
+                reset5: function() {
+                    this.counter = 0;
+                    this.hasil5 = false;
+                    this.ask = true;
+                },
+                reset6: function() {
+                    this.counter = 0;
+                    this.hasil6 = false;
+                    this.ask = true;
+                }
             }
-        }
-		})
-	</script>
+        })
+    </script>
 
     <!-- Scripts -->
     <script src="welcome/js/jquery.min.js"></script>
