@@ -24,8 +24,6 @@
     <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
 
-
-
     <!-- Website Title -->
     <title>Sistem Pakar</title>
 
@@ -72,8 +70,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../welcome/index.html">Home <span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="../welcome/index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="../welcome/forwardchaining.html">Forward Chaining</a>
@@ -106,361 +103,275 @@
     <header id="app" class="ex-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-head">
-                            Sistem Pakar Konsultasi Covid-19
-                        </div>
-                        <hr>
+                <div class="col col-md-12">
+                    <div class="card-header">
+                        <h2>Sistem Pakar Covid-19</h2>
                         <div class="card-body">
-                        </div>
-                        <div class="ask-covid">
-                            <div class="row my-3" v-show="ask">
-                                <div class="col-md-12">
-                                    <p>Apakah Anda Demam ?</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="btn btn-lg btn-primary" @click="positif()">Ya</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="btn btn-lg btn-primary" @click="negatif()">Tidak</div>
-                                </div>
-                            </div>
                             <div class="ask-covid">
-                                <div class="row my-3" v-show="ask2">
+                                <div class="row my-3" v-show="ask">
                                     <div class="col-md-12">
-                                        <p>Apakah Anda batuk ?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-lg btn-primary" @click="positif2()">Ya</button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="btn btn-lg btn-primary" @click="negatif2()">Tidak</div>
+                                        <h5>Apakah Anda Demam ?</h5>
+                                        <button class="btn-solid-lg page-scroll" @click="positif()">Ya</button>
+                                        <button class="btn-solid-lg page-scroll" @click="negatif()">Tidak</button>
                                     </div>
                                 </div>
                                 <div class="ask-covid">
-                                    <div class="row my-3" v-show="ask3">
+                                    <div class="row my-3" v-show="ask2">
                                         <div class="col-md-12">
-                                            <p>Apakah Anda kelelahan ?</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn btn-lg btn-primary" @click="positif3()">Ya</button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="btn btn-lg btn-primary" @click="negatif3()">Tidak</div>
+                                            <h5>Apakah Anda batuk ?</h5>
+                                            <button class="btn-solid-lg page-scroll" @click="positif2()">Ya</button>
+                                            <button class="btn-solid-lg page-scroll" @click="negatif2()">Tidak</button>
                                         </div>
                                     </div>
                                     <div class="ask-covid">
-                                        <div class="row my-3" v-show="ask4">
+                                        <div class="row my-3" v-show="ask3">
                                             <div class="col-md-12">
-                                                <p>Apakah Anda Mengigil ?</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button class="btn btn-lg btn-primary" @click="positif4()">Ya</button>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="btn btn-lg btn-primary" @click="negatif4()">Tidak</div>
+                                                <h5>Apakah Anda kelelahan ?</h5>
+                                                <button class="btn-solid-lg page-scroll" @click="positif3()">Ya</button>
+                                                <button class="btn-solid-lg page-scroll" @click="negatif3()">Tidak</button>
                                             </div>
                                         </div>
                                         <div class="ask-covid">
-                                            <div class="row my-3" v-show="ask5">
+                                            <div class="row my-3" v-show="ask4">
                                                 <div class="col-md-12">
-                                                    <p>Apakah Anda nyeri dada ?</p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <button class="btn btn-lg btn-primary" @click="positif5()">Ya</button>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="btn btn-lg btn-primary" @click="negatif5()">Tidak</div>
+                                                    <h5>Apakah Anda Mengigil ?</h5>
+                                                    <button class="btn-solid-lg page-scroll" @click="positif4()">Ya</button>
+                                                    <button class="btn-solid-lg page-scroll" @click="negatif4()">Tidak</button>
                                                 </div>
                                             </div>
                                             <div class="ask-covid">
-                                                <div class="row my-3" v-show="ask6">
+                                                <div class="row my-3" v-show="ask5">
                                                     <div class="col-md-12">
-                                                        <p>Apakah Anda nyeri Kepala?</p>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <button class="btn btn-lg btn-primary" @click="positif6()">Ya</button>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="btn btn-lg btn-primary" @click="negatif6()">Tidak
-                                                        </div>
+                                                        <h5>Apakah Anda nyeri dada ?</h5>
+                                                        <button class="btn-solid-lg page-scroll" @click="positif5()">Ya</button>
+                                                        <button class="btn-solid-lg page-scroll" @click="negatif5()">Tidak</button>
                                                     </div>
                                                 </div>
                                                 <div class="ask-covid">
-                                                    <div class="row my-3" v-show="ask7">
+                                                    <div class="row my-3" v-show="ask6">
                                                         <div class="col-md-12">
-                                                            <p>Apakah Anda Dehidrasi?</p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <button class="btn btn-lg btn-primary" @click="positif7()">Ya</button>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="btn btn-lg btn-primary" @click="negatif7()">
-                                                                Tidak</div>
+                                                            <h5>Apakah Anda nyeri Kepala?</h5>
+                                                            <button class="btn-solid-lg page-scroll" @click="positif6()">Ya</button>
+                                                            <button class="btn-solid-lg page-scroll" @click="negatif6()">Tidak</button>
                                                         </div>
                                                     </div>
                                                     <div class="ask-covid">
-                                                        <div class="row my-3" v-show="ask8">
+                                                        <div class="row my-3" v-show="ask7">
                                                             <div class="col-md-12">
-                                                                <p>Apakah nafsu makan Anda berkurang?</p>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <button class="btn btn-lg btn-primary" @click="positif8()">Ya</button>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="btn btn-lg btn-primary" @click="negatif8()">
-                                                                    Tidak</div>
+                                                                <h5>Apakah Anda Dehidrasi?</h5>
+                                                                <button class="btn-solid-lg page-scroll" @click="positif7()">Ya</button>
+                                                                <button class="btn-solid-lg page-scroll" @click="negatif7()">Tidak</button>
                                                             </div>
                                                         </div>
                                                         <div class="ask-covid">
-                                                            <div class="row my-3" v-show="ask9">
+                                                            <div class="row my-3" v-show="ask8">
                                                                 <div class="col-md-12">
-                                                                    <p>Apakah Anda keringat lebih ?</p>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <button class="btn btn-lg btn-primary" @click="positif9()">Ya</button>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="btn btn-lg btn-primary" @click="negatif9()">Tidak</div>
+                                                                    <h5>Apakah nafsu makan Anda berkurang?</h5>
+                                                                    <button class="btn-solid-lg page-scroll" @click="positif8()">Ya</button>
+                                                                    <button class="btn-solid-lg page-scroll" @click="negatif8()">Tidak</button>
                                                                 </div>
                                                             </div>
                                                             <div class="ask-covid">
-                                                                <div class="row my-3" v-show="ask10">
+                                                                <div class="row my-3" v-show="ask9">
                                                                     <div class="col-md-12">
-                                                                        <p>Apakah suhu Anda diatas ≥ 37,5 C ?</p>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <button class="btn btn-lg btn-primary" @click="positif10()">Ya</button>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="btn btn-lg btn-primary" @click="negatif10()">Tidak</div>
+                                                                        <h5>Apakah Anda keringat lebih ?</h5>
+                                                                        <button class="btn-solid-lg page-scroll" @click="positif9()">Ya</button>
+                                                                        <button class="btn-solid-lg page-scroll" @click="negatif9()">Tidak</button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ask-covid">
-                                                                    <div class="row my-3" v-show="ask11">
+                                                                    <div class="row my-3" v-show="ask10">
                                                                         <div class="col-md-12">
-                                                                            <p>Apakah Anda Pernah Berpergian ke luar kota ?</p>
+                                                                            <h5>Apakah suhu Anda diatas ≥ 37,5 C ?</h5>
+                                                                            <button class="btn-solid-lg page-scroll" @click="positif10()">Ya</button>
+                                                                            <button class="btn-solid-lg page-scroll" @click="negatif10()">Tidak</>
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <button class="btn btn-lg btn-primary" @click="positif11()">Ya</button>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="btn btn-lg btn-primary" @click="negatif11()">Tidak</div>
+                                                                    </div>
+                                                                    <div class="ask-covid">
+                                                                        <div class="row my-3" v-show="ask11">
+                                                                            <div class="col-md-12">
+                                                                                <h5>Apakah Anda Pernah Berpergian ke luar kota ?</h5>
+                                                                                <button class="btn-solid-lg page-scroll" @click="positif11()">Ya</button>
+                                                                            <button class="btn-solid-lg page-scroll" @click="negatif11()">Tidak</button>
                                                                         </div>
                                                                     </div>
                                                                     <div class="ask-covid">
                                                                         <div class="row my-3" v-show="ask12">
                                                                             <div class="col-md-12">
-                                                                                <p>Apakah Anda kehilangan rasa atau bau ?
-                                                                                </p>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <button class="btn btn-lg btn-primary" @click="positif12()">Ya</button>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="btn btn-lg btn-primary" @click="negatif12()">Tidak</div>
+                                                                                <h5>Apakah Anda kehilangan rasa atau bau ?</h5>
+                                                                                <button class="btn-solid-lg page-scroll" @click="positif12()">Ya</button>
+                                                                                <button class="btn-solid-lg page-scroll" @click="negatif12()">Tidak</button>
                                                                             </div>
                                                                         </div>
                                                                         <div class="ask-covid">
                                                                             <div class="row my-3" v-show="ask13">
                                                                                 <div class="col-md-12">
-                                                                                    <p>Apakah Anda kesulitan bernapas atau sesak napas ?</p>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <button class="btn btn-lg btn-primary" @click="positif13()">Ya</button>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <div class="btn btn-lg btn-primary" @click="negatif13()">Tidak</div>
+                                                                                    <h5>Apakah Anda kesulitan bernapas atau sesak napas ?</h5>
+                                                                                    <button class="btn-solid-lg page-scroll" @click="positif13()">Ya</button>
+                                                                                    <button class="btn-solid-lg page-scroll" @click="negatif13()">Tidak</button>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="ask-covid">
                                                                                 <div class="row my-3" v-show="ask14">
                                                                                     <div class="col-md-12">
-                                                                                        <p>Apakah Anda kesulitan berbicara atau bergerak, atau bingung ?</p>
-                                                                                    </div>
-                                                                                    <div class="col-md-6">
-                                                                                        <button class="btn btn-lg btn-primary" @click="positif14()">Ya</button>
-                                                                                    </div>
-                                                                                    <div class="col-md-6">
-                                                                                        <div class="btn btn-lg btn-primary" @click="negatif14()">Tidak
-                                                                                        </div>
+                                                                                        <h5>Apakah Anda kesulitan berbicara atau bergerak, atau bingung ?</h5>
+                                                                                        <button class="btn-solid-lg page-scroll" @click="positif14()">Ya</button>
+                                                                                        <button class="btn-solid-lg page-scroll" @click="negatif14()">Tidak
+                                                                                        </button>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="ask-covid">
                                                                                     <div class="row my-3" v-show="ask15">
                                                                                         <div class="col-md-12">
-                                                                                            <p>Apakah Anda sakit kepala ?
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <button class="btn btn-lg btn-primary" @click="positif15()">Ya</button>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="btn btn-lg btn-primary" @click="negatif15()">
-                                                                                                Tidak</div>
+                                                                                            <h5>Apakah Anda sakit kepala ? </h5>
+                                                                                            <button class="btn-solid-lg page-scroll" @click="positif15()">Ya</button>
+                                                                                            <button class="btn-solid-lg page-scroll" @click="negatif15()">Tidak</button>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="ask-covid">
                                                                                         <div class="row my-3" v-show="ask16">
                                                                                             <div class="col-md-12">
-                                                                                                <p>Adakah keluarga serumah yang kontak erat/suspek/konfirmasi/sedang dirawat karena Covid-19?
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <button class="btn btn-lg btn-primary" @click="positif16()">Ya</button>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="btn btn-lg btn-primary" @click="negatif16()">
-                                                                                                    Tidak</div>
+                                                                                                <h5>Adakah keluarga serumah yang kontak erat/suspek/konfirmasi/sedang dirawat karena Covid-19?</h5>
+                                                                                                <button class="btn-solid-lg page-scroll" @click="positif16()">Ya</button>
+                                                                                                <button class="btn-solid-lg page-scroll" @click="negatif16()">Tidak</button>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="ask-covid">
                                                                                             <div class="row my-3" v-show="ask17">
                                                                                                 <div class="col-md-12">
-                                                                                                    <p>Apakah Anda mata merah atau iritasi ?</p>
-                                                                                                </div>
-                                                                                                <div class="col-md-6">
-                                                                                                    <button class="btn btn-lg btn-primary" @click="positif17()">Ya</button>
-                                                                                                </div>
-                                                                                                <div class="col-md-6">
-                                                                                                    <div class="btn btn-lg btn-primary" @click="negatif17()">
-                                                                                                        Tidak</div>
+                                                                                                    <h5>Apakah Anda mata merah atau iritasi ?</h5>
+                                                                                                    <button class="btn-solid-lg page-scroll" @click="positif17()">Ya</button>
+                                                                                                    <button class="btn-solid-lg page-scroll" @click="negatif17()">Tidak</button>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="ask-covid">
                                                                                                 <div class="row my-3" v-show="ask18">
                                                                                                     <div class="col-md-12">
-                                                                                                        <p>Apakah Anda sakit tenggorokan ?
-                                                                                                        </p>
-                                                                                                    </div>
-                                                                                                    <div class="col-md-6">
-                                                                                                        <button class="btn btn-lg btn-primary" @click="positif18()">Ya</button>
-                                                                                                    </div>
-                                                                                                    <div class="col-md-6">
-                                                                                                        <div class="btn btn-lg btn-primary" @click="negatif18()">
-                                                                                                            Tidak</div>
+                                                                                                        <h5>Apakah Anda sakit tenggorokan ?</h5>
+                                                                                                        <button class="btn-solid-lg page-scroll" @click="positif18()">Ya</button>
+                                                                                                        <button class="btn-solid-lg page-scroll" @click="negatif18()">Tidak</button>
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="ask-covid">
                                                                                                     <div class="row my-3" v-show="ask19">
                                                                                                         <div class="col-md-12">
-                                                                                                            <p>Apakah Anda ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki ?
-                                                                                                            </p>
-                                                                                                        </div>
-                                                                                                        <div class="col-md-6">
-                                                                                                            <button class="btn btn-lg btn-primary" @click="positif19()">Ya</button>
-                                                                                                        </div>
-                                                                                                        <div class="col-md-6">
-                                                                                                            <div class="btn btn-lg btn-primary" @click="negatif19()">
-                                                                                                                Tidak
-                                                                                                            </div>
+                                                                                                            <h5>Apakah Anda ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki ?</h5>
+                                                                                                            <button class="btn-solid-lg page-scroll" @click="positif19()">Ya</button>
+                                                                                                            <button class="btn-solid-lg page-scroll" @click="negatif19()">Tidak</button>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="ask-covid">
                                                                                                         <div class="row my-3" v-show="ask20">
                                                                                                             <div class="col-md-12">
-                                                                                                                <p>Apakah Anda terdapat gangguan penglihatan (sensitif terhadap cahaya, konjungtivitis)?
-                                                                                                                </p>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-6">
-                                                                                                                <button class="btn btn-lg btn-primary" @click="positif20()">Ya</button>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-6">
-                                                                                                                <div class="btn btn-lg btn-primary" @click="negatif20()">
-                                                                                                                    Tidak
-                                                                                                                </div>
+                                                                                                                <h5>Apakah Anda terdapat gangguan penglihatan (sensitif terhadap cahaya, konjungtivitis)?</h5>
+                                                                                                                <button class="btn-solid-lg page-scroll" @click="positif20()">Ya</button>
+                                                                                                                <button class="btn-solid-lg page-scroll" @click="negatif20()">Tidak</button>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Tipes
-                                                                                                                    </p>
-                                                                                                                </div>
-                                                                                                                <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <h5>Kemungkinan Anda Terkena Penyakit Tipes
+                                                                                                                    </h5>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil2">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Influenza
-                                                                                                                    </p>
+                                                                                                                    <h5>Kemungkinan Anda Terkena Penyakit Influenza
+                                                                                                                    </h5>
                                                                                                                 </div>
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset2()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset2()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil3">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Demam Berdarah
-                                                                                                                    </p>
+                                                                                                                    <h5>Kemungkinan Anda Terkena Penyakit Demam Berdarah
+                                                                                                                    </h5>
                                                                                                                 </div>
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset3()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset3()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil4">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Covid-19
-                                                                                                                    </p>
+                                                                                                                    <h5>Kemungkinan Anda Terkena Penyakit Covid-19
+                                                                                                                    </h5>
                                                                                                                 </div>
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset4()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset4()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil5">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>InsyAllah Anda Sehat dari Covid
-                                                                                                                    </p>
+                                                                                                                    <h5>InsyAllah Anda Sehat dari Covid
+                                                                                                                    </h5>
                                                                                                                 </div>
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset5()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset5()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div class="ask-covid">
                                                                                                             <div class="row my-3" v-show="hasil6">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <p>Kemungkinan Anda Terkena Penyakit Hipertermia
-                                                                                                                    </p>
+                                                                                                                    <h5>Kemungkinan Anda Terkena Penyakit Hipertermia
+                                                                                                                    </h5>
                                                                                                                 </div>
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <button class="btn btn-primary" @click="reset6()">Pemeriksaan
-                                                                                                                        ulang
-                                                                                                                        ?</button>
+                                                                                                                    <button class="btn-solid-lg page-scroll" @click="reset6()">Pemeriksaan
+                                                                                                                    ulang
+                                                                                                                    ?</button>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="container border text-center">
-                                                                                                    Persentase Covid-19
-                                                                                                </div>
                                                                                             </div>
-                                                                                            <!-- end of col -->
                                                                                         </div>
-                                                                                        <!-- end of row -->
+                                                                                        <!-- end of col -->
                                                                                     </div>
-                                                                                    <!-- end of container -->
+                                                                                    <!-- end of row -->
+                                                                                </div>
+                                                                                <!-- end of container -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </header>
     <!-- end of ex-header -->
     <!-- end of header -->
@@ -480,15 +391,12 @@
     </div>
     <!-- end of copyright -->
     <!-- end of copyright -->
-
-    <!-- vue.js -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
-
     <script src="https://unpkg.com/vue"></script>
     <!-- <script src="index.js"></script> -->
     <!-- <div id="app">
 		<p>{{message}}</p>
 	</div> -->
+
     <script>
         var app = new Vue({
             el: '#app',
@@ -737,6 +645,7 @@
             }
         })
     </script>
+
 
     <!-- Scripts -->
     <script src="welcome/js/jquery.min.js"></script>
